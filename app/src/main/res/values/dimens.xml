@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="touch_target_size">48dp</dimen>
+    <dimen name="img_height">280dp</dimen>
+    <dimen name="margin_medium_x">48dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_medium_xs">18dp</dimen>
+    <dimen name="margin_small_xl">16dp</dimen>
+    <dimen name="font_medium_xxl">24sp</dimen>
+    <dimen name="font_medium_xl">22sp</dimen>
+    <dimen name="font_medium">20sp</dimen>
+    <dimen name="font_medium_xs">18sp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="button_radius_dimen">20dp</dimen>
+    <dimen name="guideline_width">1dp</dimen>
+
+
+</resources>

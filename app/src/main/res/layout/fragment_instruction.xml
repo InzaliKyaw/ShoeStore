@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/pale_coral">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startGuideLine"
+                android:layout_width="@dimen/guideline_width"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1">
+
+            </androidx.constraintlayout.widget.Guideline>
+
+            <ImageView
+                android:id="@+id/imgInstruction"
+                android:layout_width="@dimen/img_height"
+                android:layout_height="@dimen/img_height"
+                android:src="@drawable/instuctions"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/shopping_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/startGuideLine" />
+
+            <TextView
+                android:id="@+id/txtWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="@dimen/margin_medium_xs"
+                android:text="@string/effortless_shopping_at_your_fingertips"
+                android:textAlignment="viewStart"
+                android:textColor="@color/beige"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/effortless_shopping_at_your_fingertips"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgInstruction" />
+
+            <TextView
+                android:id="@+id/txtWelcomeDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:text="@string/instructions_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtWelcome"
+                style="@style/DescStyle1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNextInstruction"
+                android:text="@string/next"
+                app:cornerRadius="20dp"
+                android:contentDescription="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/margin_medium_xs"
+                style="@style/onboarding_button_style" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

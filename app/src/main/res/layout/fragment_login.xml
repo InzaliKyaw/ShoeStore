@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.shoestore.model.UserViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown"
+    tools:context=".fragments.LoginFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideLine"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <!-- Accessibility labels -->
+    <!-- EditText is a special case because it usually represents a field where users can input data. Instead of using android:contentDescription, you should use the android:hint attribute to describe the purpose of the EditText field. This hint text is automatically read aloud by screen readers like TalkBack when the field gains focus. -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_margin="@dimen/margin_medium"
+        app:errorEnabled="true"
+        app:errorText= "@{viewModel.usernameError}"
+        app:boxStrokeColor="@color/beige"
+        app:hintTextColor="@color/beige"
+        app:boxCornerRadiusBottomEnd="@dimen/button_radius_dimen"
+        app:boxCornerRadiusBottomStart="@dimen/button_radius_dimen"
+        app:boxCornerRadiusTopEnd="@dimen/button_radius_dimen"
+        app:boxCornerRadiusTopStart="@dimen/button_radius_dimen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startGuideLine"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textColor="@color/beige"
+            android:text="@={viewModel.userName}"
+            android:hint="@string/enter_user_name"
+            android:textColorHint="@color/beige">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_margin="@dimen/margin_medium"
+        app:boxStrokeColor="@color/beige"
+        app:hintTextColor="@color/beige"
+        app:errorText="@{viewModel.passwordError}"
+        app:errorEnabled="true"
+        app:boxCornerRadiusBottomEnd="@dimen/button_radius_dimen"
+        app:boxCornerRadiusBottomStart="@dimen/button_radius_dimen"
+        app:boxCornerRadiusTopEnd="@dimen/button_radius_dimen"
+        app:boxCornerRadiusTopStart="@dimen/button_radius_dimen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textColor="@color/beige"
+            android:text="@={viewModel.passWord}"
+            android:inputType="textPassword"
+            android:hint="@string/enter_password">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_target_size"
+        android:layout_marginTop="118dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:text="@string/log_in"
+        android:textColor="@color/brown"
+        android:backgroundTint="@color/beige"
+        app:cornerRadius="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

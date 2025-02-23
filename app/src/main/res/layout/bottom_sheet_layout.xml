@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/coral"
+        android:padding="@dimen/margin_small_xl">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_new_shoe"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:contentDescription="@string/add_new_shoe"
+                style="@style/HeaderStyle1" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/enter_shoe_name"
+                android:layout_marginBottom="@dimen/margin_small"
+                app:boxStrokeColor="@color/brown"
+                app:hintTextColor="@color/beige"
+                app:boxCornerRadiusBottomEnd="@dimen/button_radius_dimen"
+                app:boxCornerRadiusBottomStart="@dimen/button_radius_dimen"
+                app:boxCornerRadiusTopEnd="@dimen/button_radius_dimen"
+                app:boxCornerRadiusTopStart="@dimen/button_radius_dimen"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtShoeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_medium_x"
+                    android:textStyle="bold"
+                    android:hint="@string/enter_shoe_name">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:contentDescription="@string/enter_shoe_name"
+                app:boxStrokeColor="@color/brown"
+                app:hintTextColor="@color/beige"
+                app:boxCornerRadiusBottomEnd="@dimen/button_radius_dimen"
+                app:boxCornerRadiusBottomStart="@dimen/button_radius_dimen"
+                app:boxCornerRadiusTopEnd="@dimen/button_radius_dimen"
+                app:boxCornerRadiusTopStart="@dimen/button_radius_dimen"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtShoeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_medium_x"
+                    android:textStyle="bold"
+                    android:hint="@string/enter_shoe_description">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:contentDescription="@string/submit"
+                app:cornerRadius="@dimen/button_radius_dimen"
+                style="@style/onboarding_button_style"/>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</layout>

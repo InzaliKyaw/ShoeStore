@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+<!--    <activity-->
+<!--        android:id="@+id/mainActivity"-->
+<!--        android:name="com.example.shoestore.activities.MainActivity"-->
+<!--        android:label="MainActivity" />-->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoestore.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.shoestore.fragments.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.example.shoestore.fragments.InstructionFragment"
+        android:label="InstructionFragment"
+        tools:layout="@layout/fragment_instruction">
+        <action
+            android:id="@+id/action_instructionFragment_to_shoeHomeFragment"
+            app:destination="@id/shoeHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeHomeFragment"
+        android:name="com.example.shoestore.fragments.ShoeHomeFragment"
+        android:label="ShoeHomeFragment"
+        tools:layout="@layout/fragment_shoe_home">
+        <action
+            android:id="@+id/action_shoeHomeFragment_to_myBottomSheetDialog"
+            app:destination="@id/myBottomSheetDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/myBottomSheetDialog"
+        android:name="com.example.shoestore.fragments.ShoeDetailDialog"
+        android:label="MyBottomSheetDialog"
+        tools:layout="@layout/bottom_sheet_layout">
+        <action
+            android:id="@+id/action_myBottomSheetDialog_to_shoeHomeFragment"
+            app:destination="@id/shoeHomeFragment" />
+    </dialog>
+
+
+</navigation>
+

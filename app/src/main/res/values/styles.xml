@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="onboarding_button_style">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">@dimen/touch_target_size</item>
+        <item name="android:layout_margin">@dimen/margin_medium_xs</item>
+        <item name="android:backgroundTint">@color/beige</item>
+        <item name="android:textColor">@color/brown</item>
+    </style>
+
+    <style name="HeaderStyle1">
+        <item name="android:textColor">@color/beige</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+        <item name="android:contentDescription">@string/next</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescStyle1">
+        <item name="android:paddingLeft">@dimen/margin_medium</item>
+        <item name="android:paddingRight">@dimen/margin_medium</item>
+        <item name="android:textColor">@color/beige</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:contentDescription">@string/instructions_desc</item>
+    </style>
+
+
+</resources>
